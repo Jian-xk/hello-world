@@ -1,32 +1,15 @@
-﻿#include <QGuiApplication>
+﻿#include <QApplication>
 #include <QQmlApplicationEngine>
-#include <QFile>
-#include <QDebug>
 
 int main(int argc, char *argv[])
 {
+
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QFile file("a.txt");
-    qDebug()<<"dfgdf";
-    if (file.open(QIODevice::ReadOnly)) {
-        char buffer[2048];
-        qDebug()<<"dhdf";
-        qint64 lineLen = file.readLine(buffer,sizeof(buffer));
-        if(lineLen != -1){
-            qDebug()<<"dfgdffghf"<<buffer;
-        }
-    }
 
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-    engine.load(url);
+    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();
 }
