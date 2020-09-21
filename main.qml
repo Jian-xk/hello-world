@@ -41,6 +41,7 @@ Window {
             property int cvalue: index//model.value
         }
     }
+
     Grid {
         anchors.fill: parent
         columns: 4
