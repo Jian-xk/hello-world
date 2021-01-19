@@ -36,3 +36,6 @@ HEADERS += \
     dataarray.h \
     dataoper.h \
     datavo.h
+
+DISTFILES += \
+    TODO
