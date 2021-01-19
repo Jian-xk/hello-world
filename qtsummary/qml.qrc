@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>UImgDisplay.qml</file>
+        <file>proimage/0.png</file>
+        <file>UIButton.qml</file>
+        <file>UIFileButton.qml</file>
+        <file>LocalTime.qml</file>
+        <file>UILocalTime.qml</file>
+        <file>FlipaLocalTime.qml</file>
+        <file>ModelView.qml</file>
+        <file>BrightnessSlider.qml</file>
+    </qresource>
+</RCC>
