@@ -1,9 +1,11 @@
 TEMPLATE = app
 
 QT += qml quick network xml
+#QT += texttospeech
 CONFIG += c++11
 
 SOURCES += main.cpp \
+    texttospeech.cpp \
     turing.cpp
 
 RESOURCES += qml.qrc
@@ -15,4 +17,5 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 HEADERS += \
+    texttospeech.h \
     turing.h
