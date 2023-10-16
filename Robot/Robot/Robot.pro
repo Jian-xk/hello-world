@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += qml quick network xml
+QT += qml quick network xml texttospeech
 #QT += texttospeech
 CONFIG += c++11
 
